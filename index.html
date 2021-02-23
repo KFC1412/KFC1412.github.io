@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" href="http://static.hdslb.com/mobile/img/512.png">
+<html>
+<head>
+<title>-影子系统-</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+/* body 样式 */
+body {font-family: Arial;margin: 0;}
+/* 标题 */
+.header {padding: 80px;text-align: center;background: #6495ED;color: white;}
+/* 标题字体加大 */
+.header h1 {font-size: 40px;}
+/* 导航 */
+.navbar {overflow: hidden;background-color: #333;}
+/* 导航栏样式 */
+.navbar a {float: left;display: block;color: white;text-align: center;padding: 14px 20px;text-decoration: none;}
+/* 右侧链接*/
+.navbar a.right {float: right;}
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {background-color: #ddd;color: black;}
+/* 列容器 */
+.row {display: -ms-flexbox; /* IE10 */
+display: flex;-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;}/* 创建两个列 */
+/* 边栏 */
+.side {-ms-flex: 30%; /* IE10 */
+flex: 30%;background-color: #f1f1f1;padding: 20px;}
+/* 主要的内容区域 */
+.main {-ms-flex: 70%; /* IE10 */
+flex: 70%;background-color: white;padding: 20px;}
+/* 测试图片 */.fakeimg {background-color: #aaa;width: 100%;padding: 20px;}
+/* 底部 */
+.footer {padding: 20px;text-align: center;background: #ddd;}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {.row {flex-direction: column;}}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {.navbar a {float: none;width: 100%;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>影子系统</h1>
+  <p>欢迎使用</p>
+</div>
+
+<div class="navbar">
+  <a href="https://by2312.rthe.xyz/" target="_blank">主页</a>
+  <a href="https://by2312.rthe.xyz/film/wjzh.html" target="_blank">文件</a>
+  <a href="https://by2312.rthe.xyz/66.html" target="_blank">时钟（建议电脑端查看）</a>
+  <a href="https://by2312.rthe.xyz/mmxs.html" target="_blank">密码游戏</a>
+  <a href="https://by2312.rthe.xyz/jsq.html" target="_blank">计算器</a>
+  <a href="https://by2312.rthe.xyz/dz.html" target="_blank">打字效果</a>
+  <a href="https://by2312.rthe.xyz/ny.html" class="right" target="_blank">新年</a>
+  <a href="https://by2312.rthe.xyz/mb.html" class="right" target="_blank">秒表</a>
+  <a href="https://by2312.rthe.xyz/time.html" class="right" target="_blank">当前时间</a>
+</div>
+
+<div class="row">
+  <div class="side">
+      <h2>关于</h2>
+      <h5>相关:</h5>
+      <div class="fakeimg" style="height:200px;">为限制恶意访问<br>
+特设立访问密码<br>
+文件访问密码：9527</div>
+      <p>欢迎使用</p>
+	  <h3>更多内容</h3>
+      <p>文件下载</p>
+      <div class="fakeimg" style="height:60px;"><a href="https://dev05.baidupan.com/020713bb/2021/02/07/a2618c2c9bd4a008f31c88ce1640fe1c.exe?st=nyPpkDRHDvFeUeGq7ZafnA&e=1612678047&b=BLEBsgmyA_bFUulGYAH5SM1F8CzI_c&fi=37721570&pid=171-212-245-85&up=" class="right" target="_blank">网站驱动下载-直链</a></div><br>
+      <div class="fakeimg" style="height:60px;"><a href="https://kfc1412.github.io/" class="right" target="_blank">Github</a></div><br>
+	  <div class="fakeimg" style="height:60px;"><a href="https://fkwj.rthe.xyz/" class="right" target="_blank">反馈问卷</a></div>
+  </div>
+  <div class="main">
+      <h2>视频</h2>
+      <h5>站长B站投稿</h5>
+      <div class="fakeimg" style="height:200px;"><iframe src="//player.bilibili.com/player.html?aid=246500682&bvid=BV1Vv411e7gD&cid=292371894&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div>
+      <p>梦想！！！</p>
+
+<script>
+function displayDate(){document.getElementById("demo").innerHTML=Date();}
+</script>
+<h1>JavaScript 程序</h1>
+<p id="demo">获取当前时间</p>
+<button type="button" onclick="displayDate()">显示日期</button>
+
+      <br>
+  </div>
+</div>
+
+
+<!--块时钟-开始--!-->
+<head><style type="text/css">
+* {box-sizing: border-box;}
+.wrapper {display: -webkit-box;display: flex;width: 100%;padding: 10px;}
+.clock {width: 100%;max-width: 1000px;margin: 0 auto;display: grid;grid-template-columns: 24fr 4fr 24fr;grid-template-rows: 1fr;grid-column-gap: 10px;grid-row-gap: 0;}
+.points {display: grid;grid-template-columns: 1fr;grid-template-rows: repeat(5, 1fr);grid-column-gap: 0;grid-row-gap: 0;}
+.point {position: relative;}
+.point:nth-child(2)::before,
+.point:nth-child(4)::before {content: '';position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 50%;padding-top: 50%;background: -webkit-gradient(linear, left top, right bottom, from(#fff), color-stop(50%, #fff), color-stop(50%, #333), to(#333));background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #333 50%, #333 100%);}
+.clock__number {display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: 1fr;grid-column-gap: 10px;grid-row-gap: 0;}
+.digit {display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 3px;grid-row-gap: 3px;}
+.pixel {padding-top: 100%;background: #333;}
+.pixel__active {background: #595959;}
+.digit__0 .pixel_1, .digit__0 .pixel_2, .digit__0 .pixel_3, .digit__0 .pixel_4, .digit__0 .pixel_6, .digit__0 .pixel_7, .digit__0 .pixel_9, .digit__0 .pixel_10, .digit__0 .pixel_12, .digit__0 .pixel_13, .digit__0 .pixel_14, .digit__0 .pixel_15 {background: #FDFB42;}
+.digit__0 .pixel_1.pixel__active, .digit__0 .pixel_2.pixel__active, .digit__0 .pixel_3.pixel__active, .digit__0 .pixel_4.pixel__active, .digit__0 .pixel_6.pixel__active, .digit__0 .pixel_7.pixel__active, .digit__0 .pixel_9.pixel__active, .digit__0 .pixel_10.pixel__active, .digit__0 .pixel_12.pixel__active, .digit__0 .pixel_13.pixel__active, .digit__0 .pixel_14.pixel__active, .digit__0 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__1 .pixel_1, .digit__1 .pixel_2, .digit__1 .pixel_5, .digit__1 .pixel_8, .digit__1 .pixel_11, .digit__1 .pixel_13, .digit__1 .pixel_14, .digit__1 .pixel_15 {background: #FDFB42;}
+.digit__1 .pixel_1.pixel__active, .digit__1 .pixel_2.pixel__active, .digit__1 .pixel_5.pixel__active, .digit__1 .pixel_8.pixel__active, .digit__1 .pixel_11.pixel__active, .digit__1 .pixel_13.pixel__active, .digit__1 .pixel_14.pixel__active, .digit__1 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__2 .pixel_1, .digit__2 .pixel_2, .digit__2 .pixel_3, .digit__2 .pixel_6, .digit__2 .pixel_7, .digit__2 .pixel_8, .digit__2 .pixel_9, .digit__2 .pixel_10, .digit__2 .pixel_13, .digit__2 .pixel_14, .digit__2 .pixel_15 {background: #FDFB42;}
+.digit__2 .pixel_1.pixel__active, .digit__2 .pixel_2.pixel__active, .digit__2 .pixel_3.pixel__active, .digit__2 .pixel_6.pixel__active, .digit__2 .pixel_7.pixel__active, .digit__2 .pixel_8.pixel__active, .digit__2 .pixel_9.pixel__active, .digit__2 .pixel_10.pixel__active, .digit__2 .pixel_13.pixel__active, .digit__2 .pixel_14.pixel__active, .digit__2 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__3 .pixel_1, .digit__3 .pixel_2, .digit__3 .pixel_3, .digit__3 .pixel_6, .digit__3 .pixel_7, .digit__3 .pixel_8, .digit__3 .pixel_9, .digit__3 .pixel_12, .digit__3 .pixel_13, .digit__3 .pixel_14, .digit__3 .pixel_15 {background: #FDFB42;}
+.digit__3 .pixel_1.pixel__active, .digit__3 .pixel_2.pixel__active, .digit__3 .pixel_3.pixel__active, .digit__3 .pixel_6.pixel__active, .digit__3 .pixel_7.pixel__active, .digit__3 .pixel_8.pixel__active, .digit__3 .pixel_9.pixel__active, .digit__3 .pixel_12.pixel__active, .digit__3 .pixel_13.pixel__active, .digit__3 .pixel_14.pixel__active, .digit__3 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__4 .pixel_1, .digit__4 .pixel_3, .digit__4 .pixel_4, .digit__4 .pixel_6, .digit__4 .pixel_7, .digit__4 .pixel_8, .digit__4 .pixel_9, .digit__4 .pixel_12, .digit__4 .pixel_15 {background: #FDFB42;}
+.digit__4 .pixel_1.pixel__active, .digit__4 .pixel_3.pixel__active, .digit__4 .pixel_4.pixel__active, .digit__4 .pixel_6.pixel__active, .digit__4 .pixel_7.pixel__active, .digit__4 .pixel_8.pixel__active, .digit__4 .pixel_9.pixel__active, .digit__4 .pixel_12.pixel__active, .digit__4 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__5 .pixel_1, .digit__5 .pixel_2, .digit__5 .pixel_3, .digit__5 .pixel_4, .digit__5 .pixel_7, .digit__5 .pixel_8, .digit__5 .pixel_9, .digit__5 .pixel_12, .digit__5 .pixel_13, .digit__5 .pixel_14, .digit__5 .pixel_15 {background: #FDFB42;}
+.digit__5 .pixel_1.pixel__active, .digit__5 .pixel_2.pixel__active, .digit__5 .pixel_3.pixel__active, .digit__5 .pixel_4.pixel__active, .digit__5 .pixel_7.pixel__active, .digit__5 .pixel_8.pixel__active, .digit__5 .pixel_9.pixel__active, .digit__5 .pixel_12.pixel__active, .digit__5 .pixel_13.pixel__active, .digit__5 .pixel_14.pixel__active, .digit__5 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__6 .pixel_1, .digit__6 .pixel_2, .digit__6 .pixel_3, .digit__6 .pixel_4, .digit__6 .pixel_7, .digit__6 .pixel_8, .digit__6 .pixel_9, .digit__6 .pixel_10, .digit__6 .pixel_12, .digit__6 .pixel_13, .digit__6 .pixel_14, .digit__6 .pixel_15 {background: #FDFB42;}
+.digit__6 .pixel_1.pixel__active, .digit__6 .pixel_2.pixel__active, .digit__6 .pixel_3.pixel__active, .digit__6 .pixel_4.pixel__active, .digit__6 .pixel_7.pixel__active, .digit__6 .pixel_8.pixel__active, .digit__6 .pixel_9.pixel__active, .digit__6 .pixel_10.pixel__active, .digit__6 .pixel_12.pixel__active, .digit__6 .pixel_13.pixel__active, .digit__6 .pixel_14.pixel__active, .digit__6 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__7 .pixel_1, .digit__7 .pixel_2, .digit__7 .pixel_3, .digit__7 .pixel_6, .digit__7 .pixel_9, .digit__7 .pixel_12, .digit__7 .pixel_15 {background: #FDFB42;}
+.digit__7 .pixel_1.pixel__active, .digit__7 .pixel_2.pixel__active, .digit__7 .pixel_3.pixel__active, .digit__7 .pixel_6.pixel__active, .digit__7 .pixel_9.pixel__active, .digit__7 .pixel_12.pixel__active, .digit__7 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__8 .pixel_1, .digit__8 .pixel_2, .digit__8 .pixel_3, .digit__8 .pixel_4, .digit__8 .pixel_6, .digit__8 .pixel_7, .digit__8 .pixel_8, .digit__8 .pixel_9, .digit__8 .pixel_10, .digit__8 .pixel_12, .digit__8 .pixel_13, .digit__8 .pixel_14, .digit__8 .pixel_15 {background: #FDFB42;}
+.digit__8 .pixel_1.pixel__active, .digit__8 .pixel_2.pixel__active, .digit__8 .pixel_3.pixel__active, .digit__8 .pixel_4.pixel__active, .digit__8 .pixel_6.pixel__active, .digit__8 .pixel_7.pixel__active, .digit__8 .pixel_8.pixel__active, .digit__8 .pixel_9.pixel__active, .digit__8 .pixel_10.pixel__active, .digit__8 .pixel_12.pixel__active, .digit__8 .pixel_13.pixel__active, .digit__8 .pixel_14.pixel__active, .digit__8 .pixel_15.pixel__active {background: #98fcfc;}
+.digit__9 .pixel_1, .digit__9 .pixel_2, .digit__9 .pixel_3, .digit__9 .pixel_4, .digit__9 .pixel_6, .digit__9 .pixel_7, .digit__9 .pixel_8, .digit__9 .pixel_9, .digit__9 .pixel_12, .digit__9 .pixel_13, .digit__9 .pixel_14, .digit__9 .pixel_15 {background: #FDFB42;}
+.digit__9 .pixel_1.pixel__active, .digit__9 .pixel_2.pixel__active, .digit__9 .pixel_3.pixel__active, .digit__9 .pixel_4.pixel__active, .digit__9 .pixel_6.pixel__active, .digit__9 .pixel_7.pixel__active, .digit__9 .pixel_8.pixel__active, .digit__9 .pixel_9.pixel__active, .digit__9 .pixel_12.pixel__active, .digit__9 .pixel_13.pixel__active, .digit__9 .pixel_14.pixel__active, .digit__9 .pixel_15.pixel__active {background: #98fcfc;}
+
+	</style>
+</head>
+<div class='wrapper'>
+  <div class='clock'>
+    <div class='clock__number hours'>
+      <div class='digit digit__0'>
+        <div class='pixel pixel_1'></div><div class='pixel pixel_2'></div><div class='pixel pixel_3'></div><div class='pixel pixel_4'></div><div class='pixel pixel_5'></div><div class='pixel pixel_6'></div>
+        <div class='pixel pixel_7'></div><div class='pixel pixel_8'></div><div class='pixel pixel_9'></div><div class='pixel pixel_10'></div><div class='pixel pixel_11'></div><div class='pixel pixel_12'></div>
+		<div class='pixel pixel_13'></div><div class='pixel pixel_14'></div><div class='pixel pixel_15'></div></div>
+      <div class='digit digit__0'>
+        <div class='pixel pixel_1'></div><div class='pixel pixel_2'></div><div class='pixel pixel_3'></div><div class='pixel pixel_4'></div><div class='pixel pixel_5'></div><div class='pixel pixel_6'></div>
+        <div class='pixel pixel_7'></div><div class='pixel pixel_8'></div><div class='pixel pixel_9'></div><div class='pixel pixel_10'></div><div class='pixel pixel_11'></div><div class='pixel pixel_12'></div>
+        <div class='pixel pixel_13'></div><div class='pixel pixel_14'></div><div class='pixel pixel_15'></div></div></div>
+    <div class='points'>
+      <div class='point'></div><div class='point'></div><div class='point'></div><div class='point'></div><div class='point'></div></div>
+    <div class='clock__number minutes'>
+      <div class='digit digit__0'>
+        <div class='pixel pixel_1'></div><div class='pixel pixel_2'></div><div class='pixel pixel_3'></div><div class='pixel pixel_4'></div><div class='pixel pixel_5'></div><div class='pixel pixel_6'></div>
+        <div class='pixel pixel_7'></div><div class='pixel pixel_8'></div><div class='pixel pixel_9'></div><div class='pixel pixel_10'></div><div class='pixel pixel_11'></div><div class='pixel pixel_12'></div>
+        <div class='pixel pixel_13'></div><div class='pixel pixel_14'></div><div class='pixel pixel_15'></div></div>
+      <div class='digit digit__0'>
+        <div class='pixel pixel_1'></div><div class='pixel pixel_2'></div><div class='pixel pixel_3'></div><div class='pixel pixel_4'></div><div class='pixel pixel_5'></div><div class='pixel pixel_6'></div>
+        <div class='pixel pixel_7'></div><div class='pixel pixel_8'></div><div class='pixel pixel_9'></div><div class='pixel pixel_10'></div><div class='pixel pixel_11'></div><div class='pixel pixel_12'></div>
+        <div class='pixel pixel_13'></div><div class='pixel pixel_14'></div><div class='pixel pixel_15'></div></div>
+    </div></div></div>
+
+<SCRIPT type="text/javascript">
+let digits = document.getElementsByClassName('digit'),pixels = document.getElementsByClassName('pixel');
+function setTime() {let i,date = new Date(),seconds = date.getSeconds(),pixels_to_toggle = (seconds === 0)? 60 : seconds,time_numbers = ((date).toTimeString().substr(0,6)).split(':').join('');
+for (i = 0; i < time_numbers.length; i++) {digits[i].className = 'digit digit__' + time_numbers.charAt(i);}
+for (i = 0; i < pixels_to_toggle; i++) {pixels[i].classList.toggle('pixel__active', seconds !== 0);}};setTime();setInterval(setTime, 500);
+</SCRIPT>
+
+<!--块时钟-结束--!-->
+
+
+
+<div class="footer">
+  <h2>© FC 2021</h2>
+  <a href="https://by2312.rthe.xyz/666.html" target="_blank">牛逼</a>
+  <a href="https://by2312.rthe.xyz/o.html" target="_blank">专属</a>
+  <a href="https://space.bilibili.com/407766444" target="_blank">B站</a>
+  <a href="https://github.com/KFC1412/class001" target="_blank">GitHub</a>
+  <br>
+  <a href="https://by2312.rthe.xyz/other/GZZD.html" target="_blank">本站法律法规</a>
+</div>
+
+</body>
+</html>
+
+
+
